@@ -1,4 +1,39 @@
 $(function() {
+
+    // Add a class to use as a style hook when JavaScript is available
+    $('body').addClass('js');
+
+    var wideMode = false;
+    
+    if ( $(window).width() >= 768 ) {
+        wideMode = true;
+    }
+
+    $window.resize(function() {
+        clearTimeout(this.id);
+        this.id = setTimeout(doneResizing, 500);
+    });
+
+    function doneResizing() {
+        if ( $(window).width() >= 768 ) {
+            wideMode = true;
+        } else {
+            wideMode = false;
+        }
+    }
+
+    // Show/hide the navigation in small viewports
+    if (!wideMode) {
+        $("#page-nav").click(function(){
+            $(this).animate({ top: "0" }, 'fast'); // Slide down
+            $(this).mouseleave(function(){ $(this).removeAttr("style"); });
+            $("body").bind('click', function(){
+                $("#page-nav").removeAttr("style");
+            });
+        });
+    }
+
+
     // Dummy console for IE7
     if (window.console === undefined) window.console = {log: function() {}};
 
@@ -25,4 +60,11 @@ $(function() {
     $('form.languages select').change(function(){
         this.form.submit();
     });
+    
+    // Load external links in new tab/window
+    $("a[rel='external']").click( function(e) {
+        e.preventDefault();
+        window.open(this.href);
+    });
+    
 });
