@@ -8,10 +8,9 @@
     var $window = $(window);
     var $nav = $('#page-nav');
     var $head = $('#masthead');
-    var headHeight = $head.height();
 
     // Sticky navigation
-    var fixed = false;
+    var navFixed = false;
     var didScroll = false;
 
     $window.scroll(function() {
@@ -30,13 +29,13 @@
             didScroll = false;
             var scrollTop = $window.scrollTop();
             if( scrollTop > 0 ) {
-                if(!fixed) {
-                    fixed = true;
+                if(!navFixed) {
+                    navFixed = true;
                     $head.addClass("fixed");
                 }
             } else {
-                if(fixed) {
-                    fixed = false;
+                if(navFixed) {
+                    navFixed = false;
                     $head.removeAttr("class");
                 }
             }
@@ -49,7 +48,7 @@
     // Change the navbar color and current item to match the section waypoint
     function waypointCallback(current, previous) {
         return function(event, direction) {
-            if (fixed) {
+            if (navFixed) {
                 if (direction === 'down') {
                     $nav.attr('class', 'fixed ' + current);
                     $nav.find("li").removeClass();
@@ -111,7 +110,7 @@
         });
 
         // Close on background click
-        $("#fill, #inner").bind('click', function(e) {
+        $("#fill, #inner").bind('click', function() {
             $("#fill").remove();
             $("body").removeClass("noscroll");
             origin.focus();

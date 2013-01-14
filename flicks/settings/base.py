@@ -208,8 +208,8 @@ CSP_STYLE_SRC = ("'self'",
                  'https://www.mozilla.org',
                  'http://mozcom-cdn.mozilla.net',
                  'https://mozcom-cdn.mozilla.net',
-                 'http://player.vimeo.com',
-                 'https://player.vimeo.com',)
+                 'http://*.vimeo.com',
+                 'https://*.vimeo.com',)
 CSP_FONT_SRC = ("'self'",
                 'https://themes.googleusercontent.com',
                 'http://www.mozilla.org',
@@ -229,16 +229,16 @@ CSP_SCRIPT_SRC = ("'self'",
                   'https://www.mozilla.org',
                   'http://mozcom-cdn.mozilla.net',
                   'https://mozcom-cdn.mozilla.net',
-                  'http://player.vimeo.com',
-                  'https://player.vimeo.com',
-                  'https://secure-a.vimeocdn.com',)
+                  'http://*.vimeo.com',
+                  'https://*.vimeo.com',
+                  'https://*.vimeocdn.com',)
 CSP_FRAME_SRC = ('https://vid.ly',
                  'http://platform.twitter.com',
                  'https://platform.twitter.com',
                  'https://www.facebook.com',
-                 'http://player.vimeo.com',
-                 'https://player.vimeo.com',
-                 'https://secure-a.vimeocdn.com',)
+                 'http://*.vimeo.com',
+                 'https://*.vimeo.com',
+                 'https://*.vimeocdn.com',)
 CSP_OPTIONS = ('eval-script', 'inline-script')
 
 # Blacklist of unacceptable content-types for video URLs

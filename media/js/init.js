@@ -3,19 +3,15 @@ $(function() {
     // Add a class to use as a style hook when JavaScript is available
     $('body').addClass('js');
 
-    var wideMode = false;
-    
-    if ( $(window).width() >= 768 ) {
-        wideMode = true;
-    }
+    var wideMode = $(window).width() >= 768;
 
-    $window.resize(function() {
+    $(window).resize(function() {
         clearTimeout(this.id);
         this.id = setTimeout(doneResizing, 500);
     });
 
     function doneResizing() {
-        if ( $(window).width() >= 768 ) {
+        if ($(window).width() >= 768) {
             wideMode = true;
         } else {
             wideMode = false;

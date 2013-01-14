@@ -126,56 +126,74 @@
       <ul class="entry-list">
         <li class="entry">
           {# l10n: This is "watch" meaning to view a video, used in link labels #}
-          <a href="#" class="video-play" title="{{ _('Watch') }} “Falling in Love with Firefox”" data-vimeo-id="57021741">
+          <a href="#" class="video-play" title="{% trans title='Falling in Love with Firefox' %}Watch “{{ title }}”{% endtrans %}" data-vimeo-id="57021741">
             <img src="{{ MEDIA_URL }}img/home/vidthumb-falling.jpg" alt="" class="thumbnail">
             <hgroup>
               <h2>Falling in Love with Firefox</h2>
-              <h3>Lee Sang Woo, {{ _('Korea') }}</h3>
+              <h3 class="vcard">
+                <span class="fn">Lee Sang Woo</span>, 
+                <span class="country-name">Korea</span>
+              </h3>
             </hgroup>
           </a>
         </li>
         <li class="entry">
-          <a href="#" class="video-play" title="{{ _('Watch') }} “Be a Hero”" data-vimeo-id="57021741">
+          <a href="#" class="video-play" title="{% trans title='Be a Hero' %}Watch “{{ title }}”{% endtrans %}" data-vimeo-id="57021741">
             <img src="{{ MEDIA_URL }}img/home/vidthumb-hero.jpg" alt="" class="thumbnail">
             <hgroup>
               <h2>Be a Hero</h2>
-              <h3>Andre Felipe Mesa, Rincon, {{ _('Colombia') }}</h3>
+              <h3 class="vcard">
+                <span class="fn">Andre Felipe Mesa</span>, 
+                <span class="country-name">Colombia</span>
+              </h3>
             </hgroup>
           </a>
         </li>
         <li class="entry">
-          <a href="#" class="video-play" title="{{ _('Watch') }} “Squares”" data-vimeo-id="57021741">
+          <a href="#" class="video-play" title="{% trans title='Squares' %}Watch “{{ title }}”{% endtrans %}" data-vimeo-id="57021741">
             <img src="{{ MEDIA_URL }}img/home/vidthumb-squares.jpg" alt="" class="thumbnail">
             <hgroup>
               <h2>Squares</h2>
-              <h3>Eric Perrella, {{ _('Canada') }}</h3>
+              <h3 class="vcard">
+                <span class="fn">Eric Perrella</span>, 
+                <span class="country-name">Canada</span>
+              </h3>
             </hgroup>
           </a>
         </li>
         <li class="entry">
-          <a href="#" class="video-play" title="{{ _('Watch') }} “Where the Weird Things Are Not”" data-vimeo-id="57021741">
+          <a href="#" class="video-play" title="{% trans title='Where the Weird Things Are Not' %}Watch “{{ title }}”{% endtrans %}" data-vimeo-id="57021741">
             <img src="{{ MEDIA_URL }}img/home/vidthumb-weird.jpg" alt="" class="thumbnail">
             <hgroup>
               <h2>Where the Weird Things Are Not</h2>
-              <h3>Ferran Brooks, {{ _('Spain') }}</h3>
+              <h3 class="vcard">
+                <span class="fn">Ferran Brooks</span>, 
+                <span class="country-name">Spain</span>
+              </h3>
             </hgroup>
           </a>
         </li>
         <li class="entry">
-          <a href="#" class="video-play" title="{{ _('Watch') }} “Paranoid”" data-vimeo-id="57021741">
+          <a href="#" class="video-play" title="{% trans title='Paranoid' %}Watch “{{ title }}”{% endtrans %}" data-vimeo-id="57021741">
             <img src="{{ MEDIA_URL }}img/home/vidthumb-paranoid.jpg" alt="" class="thumbnail">
             <hgroup>
               <h2>Paranoid</h2>
-              <h3>Sean O‘Riordan, {{ _('United Kingdom') }}</h3>
+              <h3 class="vcard">
+                <span class="fn">Sean O‘Riordan</span>, 
+                <span class="country-name">United Kingdom</span>
+              </h3>
             </hgroup>
           </a>
         </li>
         <li class="entry">
-          <a href="#" class="video-play" title="{{ _('Watch') }} “Firefox Privacy”" data-vimeo-id="15607283">
+          <a href="#" class="video-play" title="{% trans title='Firefox Privacy' %}Watch “{{ title }}”{% endtrans %}" data-vimeo-id="15607283">
             <img src="{{ MEDIA_URL }}img/home/vidthumb-privacy.jpg" alt="" class="thumbnail">
             <hgroup>
               <h2>Firefox Privacy</h2>
-              <h3>Anahita Gottipati, {{ _('India') }}</h3>
+              <h3 class="vcard">
+                <span class="fn">Anahita Gottipati</span>, 
+                <span class="country-name">India</span>
+              </h3>
             </hgroup>
           </a>
         </li>
