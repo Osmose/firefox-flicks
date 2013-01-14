@@ -191,8 +191,6 @@
   margin: 0 10px 2em;    
 }
 
-.entry-list .entry:nth-child(3n+1) {
-  clear: left;
 }
 
 .entry .thumbnail {
